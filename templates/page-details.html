@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- META DATA -->
+    <title>Codelander | HTML Landing Page by Codefest&trade;</title>
+    <meta
+      name="description"
+      content="Codelander is a multi-purpose HTML landing page template by Codefest&trade;. Purchase now."
+    />
+    <meta name="keywords" content="Codelander,Codefest" />
+    <meta name="author" content="Codefest" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/7e3c29d4c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- End Font awesome -->
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{%static 'css/accordian.css' %}"
+    />
+    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{%static 'css/main.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{%static 'js/smoothscroll.js' %}"></script>
+    <script>
+      $("#navbarNav").on("click", "a", function () {
+        $(".navbar-toggle").click();
+        //or $("#nav").slideToggle();
+      });
+    </script>
+  </head>
+  <body style="overflow-x:hidden;">
+    <nav
+      id="navbar"
+      class="navbar fixed-top navbar-expand-lg navbar-header navbar-mobile"
+    >
+      <div class="navbar-container container">
+        <!-- LOGO -->
+        <div class="navbar-brand">
+          <a class="navbar-brand-logo" href="#">
+            <img
+              src="https://demo.codefest.co.uk/codelander/assets/images/logo.png"
+              width="155px"
+            />
+          </a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-around"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav menu-navbar-nav"></ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link learn-more-btn" href="/View/Auth">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div
+      style="display: flex; padding: 175px 0 25px 0; flex-direction: column"
+      class="page__detailsContainer"
+    >
+      <div
+        style="display: flex; justify-content: center; align-items: center"
+        class="page__detailsHeader"
+      >
+        <h1
+          style="
+            line-height: 1;
+            font-weight: 800;
+            font-size: 30px;
+            font-family: Montserrat;
+            color: #303669;
+          "
+        >
+          page details
+        </h1>
+      </div>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+        class="page_detailsBody"
+      >
+        <div
+          class="page__detailsLeft"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+          "
+        >
+          <img
+            style="padding: 20px; border-radius: 50%; width: 50%"
+            src="data:image/png;base64,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"
+            alt="avatar"
+          />
+          <h3
+            style="
+              line-height: 1;
+              font-weight: 800;
+              font-size: 18px;
+              font-family: Montserrat;
+              color: #303669;
+            "
+          >
+            Page name
+          </h3>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            padding: 20px;
+          "
+          class="page__detailsRight"
+        >
+          <div class="services-accordion">
+            <button style="width: 60%; font-size: 15px" class="accordion">
+              Comments Automation
+            </button>
+
+            <div class="panel">
+              <textarea class="textarea"> </textarea>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-evenly;
+                  align-items: center;
+                "
+                class="buttons"
+              >
+                <a class="nav-link learn-more-btn btn-invert" href="#pricing"
+                  >View Pricing</a
+                >
+                <a class="nav-link learn-more-btn btn-invert" href="#pricing"
+                  >View Pricing</a
+                >
+              </div>
+            </div>
+            <button style="width: 60%; font-size: 15px" class="accordion">
+              Messenger Automation
+            </button>
+            <div class="panel">
+              <style>
+                .active {
+                  background-color: #e83e8c !important;
+                }
+                .textarea {
+                  margin: 20px;
+                  border-radius: 9px;
+                  border: 1px solid #007bff;
+                  transition: 450ms ease-in-out;
+                }
+                .textarea:focus {
+                  border: 1px solid #e83e8c;
+                  box-shadow: 0 20px 50px #e83e8c;
+                }
+
+                .learn-more-btn {
+                  margin: 12px;
+                }
+              </style>
+              <textarea class="textarea"> </textarea>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-evenly;
+                  align-items: center;
+                "
+                class="buttons"
+              >
+                <a class="nav-link learn-more-btn" href="#pricing">cancel</a>
+                <a class="nav-link learn-more-btn btn-invert" href="#pricing"
+                  >Save Changes</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 70px;" class="footer-section">
+        <div class="footer-section-bg-graphics">
+          <img
+            src="https://demo.codefest.co.uk/codelander/assets/images/footer-section-bg.png"
+          />
+        </div>
+        <!-- Footer Column 1 -->
+        <div class="container footer-container">
+          <div class="col-lg-3 col-md-6 footer-logo">
+            <img
+              src="https://demo.codefest.co.uk/codelander/assets/images/logo_footer.png"
+            />
+            <p class="footer-susection-text">
+              A beautiful landing page template by Codefest.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-subsection">
+            <div class="footer-subsection-2-1">
+              <h3 class="footer-subsection-title">About</h3>
+              <p class="footer-subsection-text">
+                We like to do business at Codelander HQ to our clients'
+                satisfaction.
+              </p>
+            </div>
+          </div>
+          <!-- Footer Column 2 -->
+          <div class="col-lg-3 col-md-6 footer-subsection">
+            <h3 class="footer-subsection-title">Contact Us</h3>
+            <ul class="footer-subsection-list">
+              <li>123 Business Centre<br />London SW1A 1AA</li>
+              <li>0123456789</li>
+              <li>mail@domain.com</li>
+            </ul>
+          </div>
+          <!-- Footer Column 3 -->
+          <div class="col-lg-3 col-md-6 footer-subsection">
+            <div class="footer-subsection-2-2">
+              <h3 class="footer-subsection-title">Socials</h3>
+              <div class="footer-social-media-icons-section">
+                <a href="#top" class="footer-social-media-icon"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+                <a href="#top" class="footer-social-media-icon"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a href="#top" class="footer-social-media-icon"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+                <a href="#top" class="footer-social-media-icon"
+                  ><i class="fa fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FOOTER CREDITS -->
+        <div class="footer"></div>
+        <div
+          style="overflow: hidden; width: 100%; padding: 0px"
+          class="container footer-credits"
+        >
+          <p>
+            &copy; 2020
+            <a
+              href="https://www.codefest.co.uk"
+              target="_blank"
+              title="Codefest"
+              >Codefest</a
+            >&trade;. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="{%static 'js/owl.carousel.js' %}"></script>
+    <script src="{%static 'js/accordian.js' %}"></script>
+    <!-- Header scroll -->
+    <script type="text/javascript">
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 20) {
+          $("#navbar").addClass("header-scrolled");
+        } else {
+          $("#navbar").removeClass("header-scrolled");
+        }
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          items: 4,
+          loop: true,
+          nav: true,
+          autoplay: true,
+          autoplayTimeout: 2000,
+          autoplayHoverPause: true,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 3,
+            },
+            1000: {
+              items: 4,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
